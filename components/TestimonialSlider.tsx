@@ -2,7 +2,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 
 import ReviewCarousel from './ReviewCarousel';
 
-const OPTIONS: EmblaOptionsType = { loop: true }
+const OPTIONS: EmblaOptionsType = { loop: true , align : 'start' }
 const SLIDE_COUNT = 3
 const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 
