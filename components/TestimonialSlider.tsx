@@ -2,7 +2,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 
 import ReviewCarousel from './ReviewCarousel';
 
-const OPTIONS: EmblaOptionsType = { loop: true , align : 'start' }
+const OPTIONS: EmblaOptionsType = { loop: true, align: 'start' }
 const SLIDE_COUNT = 3
 const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 
@@ -21,8 +21,8 @@ const TestimonialSlider: React.FC = () => {
               </span>
             </h2>
           </div>
-          <div className="group bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600">
-          <ReviewCarousel slides = {SLIDES} options = {OPTIONS} />
+          <div className="group w-full lg:w-3/5 bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600">
+            <ReviewCarousel slides={SLIDES} options={OPTIONS} />
           </div>
         </div>
       </div>

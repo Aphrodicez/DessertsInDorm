@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             </button>
           </div>
           <div className = "hidden md:flex">
-          <ul className="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+          <ul className="pr-3 flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
               <li>
                 <Link
                   href="#"
