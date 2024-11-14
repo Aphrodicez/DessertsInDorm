@@ -1,9 +1,6 @@
-import React, { useCallback } from 'react'
-import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
+import React from 'react'
+import { EmblaOptionsType } from 'embla-carousel'
 import {
-  PrevButton,
-  NextButton,
-  usePrevNextButtons
 } from './ReviewCarouselArrowButtons'
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -43,26 +40,7 @@ const testimonials = [
 
 const ReviewCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
-
-  const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
-    const autoplay = emblaApi?.plugins()?.autoplay
-    if (!autoplay) return
-
-    const resetOrStop =
-      autoplay.options.stopOnInteraction === false
-        ? autoplay.reset
-        : autoplay.stop
-
-    resetOrStop()
-  }, [])
-
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi, onNavButtonClick)
+  const [emblaRef] = useEmblaCarousel(options, [Autoplay()])
 
   return (
     <section className="embla">

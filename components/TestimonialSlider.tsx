@@ -1,42 +1,12 @@
-import React, { useState } from 'react';
-import ReviewCarousel from './ReviewCarousel';
-
-const testimonials = [
-  {
-    id: 1,
-    name: 'Jane D',
-    role: 'CEO',
-    image: 'https://pagedone.io/asset/uploads/1696229969.png',
-    rating: 5,
-    feedback: 'The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.',
-  },
-  {
-    id: 2,
-    name: 'Harsh P',
-    role: 'Product Designer',
-    image: 'https://pagedone.io/asset/uploads/1696229994.png',
-    rating: 5,
-    feedback: 'Pagedone has made the process so much simpler and stress-free.',
-  },
-  // Add more testimonials as needed
-];
-
 import { EmblaOptionsType } from 'embla-carousel'
+
+import ReviewCarousel from './ReviewCarousel';
 
 const OPTIONS: EmblaOptionsType = { loop: true }
 const SLIDE_COUNT = 3
 const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 
 const TestimonialSlider: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
-  };
 
   return (
     <section className="py-24">

@@ -1,5 +1,3 @@
-// components/Navbar.tsx
-
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion'

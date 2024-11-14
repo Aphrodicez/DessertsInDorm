@@ -6,6 +6,7 @@ import {
   EmblaEventType,
   EmblaOptionsType
 } from 'embla-carousel'
+import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 
 const IMAGES: string[] = ['kanomchan.jpg', 'daifuku.jpg', 'yogurtbar.jpg']
@@ -22,7 +23,7 @@ type PropType = {
 
 const MenuCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
   const tweenFactor = useRef(0)
 
   const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {

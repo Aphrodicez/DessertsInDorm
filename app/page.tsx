@@ -1,6 +1,5 @@
 'use client'
 
-import { UtensilsCrossed } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
@@ -13,7 +12,6 @@ import React from 'react'
 import '@/app/css/embla.css'
 import Navbar from '@/components/Navbar'
 import TestimonialSlider from '@/components/TestimonialSlider'
-import ReviewCarousel from '@/components/ReviewCarousel'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -36,7 +34,7 @@ export default function Home() {
                   Have a look at our recipes
                 </h2>
                 <p className="text-muted-foreground md:text-xl mb-4">
-                  Discover a world of culinary delights with our handpicked selection of mouthwatering recipes. From quick and easy weeknight dinners to impressive dishes for special occasions, we've got something for every taste and skill level.
+                  Discover a world of culinary delights with our handpicked selection of mouthwatering recipes. From quick and easy weeknight dinners to impressive dishes for special occasions, weve got something for every taste and skill level.
                 </p>
                 <Button size="lg">Explore Recipes</Button>
               </div>
