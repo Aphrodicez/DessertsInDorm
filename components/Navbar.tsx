@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion'
@@ -11,11 +13,11 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="mx-auto bg-[#edeef3]">
-      <nav className="border-gray-200 px-2 mb-10 shadow-[0px_4px_4px_0px_#00000025]">
+      <nav className="border-gray-200 mb-10 shadow-[0px_4px_4px_0px_#00000025]">
         <div>
-        <div className="container mx-auto flex flex-wrap items-center justify-between min-w-full">
-          <Link href="#" className="flex">
-            <img src='GitHub-Logo.png' alt="GitHub Logo" className="w-10 h-14 py-2" />
+        <div className="container mx-auto flex flex-wrap items-center justify-between min-w-full border-gray-200 shadow-[0px_4px_4px_0px_#00000025] px-2">
+          <Link href="https://github.com/Aphrodicez/DessertsInDorm" className="flex">
+            <img src='/GitHub-Logo.png' alt="GitHub Logo" className="w-10 h-14 py-2" />
             <span className="self-center text-lg font-semibold whitespace-nowrap pl-4">
               Life Long Learning
             </span>
@@ -57,10 +59,10 @@ const Navbar: React.FC = () => {
           </div>
           <div className = "hidden md:flex">
           <ul className="pr-3 flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-              <li>
+              <li className='bg-none'>
                 <Link
-                  href="#"
-                  className="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded"
+                  href="/"
+                  className="md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded"
                   aria-current="page"
                 >
                   Home
@@ -68,18 +70,18 @@ const Navbar: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
                 >
-                  About
+                  Review Us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
                 >
-                  Services
+                  About
                 </Link>
               </li>
             </ul>
@@ -99,11 +101,11 @@ const Navbar: React.FC = () => {
             } md:flex justify-between items-center w-full md:w-auto md:order-2`}
             id="mobile-menu-3"
           >
-            <ul className="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+            <ul className="flex-col md:flex-row flex md:space-x-8 mt-1 md:mt-0 md:text-sm md:font-medium pb-2">
               <li>
                 <Link
-                  href="#"
-                  className="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded"
+                  href="/"
+                  className="bg-none hover:bg-blue-700 hover:text-white md:bg-transparent text-gray-700 block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded"
                   aria-current="page"
                 >
                   Home
@@ -111,18 +113,18 @@ const Navbar: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
+                  href="/"
+                  className="bg-none hover:bg-blue-700 hover:text-white text-gray-700 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
                 >
-                  About
+                  Review Us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
+                  href="/"
+                  className="bg-none hover:bg-blue-700 hover:text-white text-gray-700 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
                 >
-                  Services
+                  About
                 </Link>
               </li>
             </ul>

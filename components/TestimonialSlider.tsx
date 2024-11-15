@@ -9,13 +9,12 @@ const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 const TestimonialSlider: React.FC = () => {
 
   return (
-    <section className="py-24">
+    <section className="py-auto px-auto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
           <div className="w-full lg:w-2/5">
-            <span className="text-sm text-gray-500 font-medium mb-4 block">Testimonial</span>
-            <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-8">
-              23k+ Customers gave their{' '}
+            <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-8 text-center">
+              Take a look at our user's {' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-violet-600">
                 Feedback
               </span>

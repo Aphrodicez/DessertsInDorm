@@ -8,8 +8,11 @@ import {
 } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
+import Link from 'next/link'
 
-const IMAGES: string[] = ['kanomchan.jpg', 'daifuku.jpg', 'yogurtbar.jpg']
+const IMAGES: string[] = ['kanomchan', 'daifuku', 'yogurtbar']
+const NAMES: string[] = ['ขนมขั้นชาไทย', 'ไดฟุกุ', 'โยเกิร์ตบาร์']
+const TOOLS: string[] = ['ไมโครเวฟ', 'ไมโครเวฟ', 'ตู้เย็น']
 
 const TWEEN_FACTOR_BASE = 0.84
 
@@ -82,23 +85,31 @@ const MenuCarousel: React.FC<PropType> = (props) => {
       .on('slideFocus', tweenOpacity)
   }, [emblaApi, tweenOpacity])
 
+  console.log(IMAGES[1])
+
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (
-            <div className="embla__slide overflow-hidden" key={index}>
-              <div className = "h-5/6">
-                <img
-                  className="object-cover rounded-3xl w-full h-full"
-                  src={IMAGES[index]}
-                  alt="Your alt text"
-                />
-              </div>
-              <div className="text-3xl font-bold text-center text-black w-full h-1/6">
-                {index + 1}
-              </div>
-            </div>
+            <Link href={`/recipe/${IMAGES[index]}`} key={index} className="embla__slide overflow-hidden">
+              <div className="h-auto">
+  <div className="h-5/6">
+    <img
+      className="object-cover rounded-3xl w-full h-full"
+      src={`/${IMAGES[index]}23.jpg`}
+      alt="Your alt text"
+    />
+  </div>
+  <div className="text-base sm:text-xl font-bold text-center text-black w-full pt-2 pb-4">
+    {NAMES[index]}
+  </div>
+  <div className="text-sm sm:text-base text-center text-black pb-2">
+    สูตรง่าย ๆ ใช้เพียง {TOOLS[index]}
+  </div>
+</div>
+
+            </Link>
           ))}
         </div>
       </div>

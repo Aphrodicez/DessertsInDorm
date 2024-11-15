@@ -21,7 +21,7 @@ const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 
 <MenuCarousel slides={SLIDES} options={OPTIONS} />
 
-const MAINTANANCE: boolean = true;
+const MAINTANANCE: boolean = false;
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
     <div className="bg-gradient-to-l from-[#f5dde0] to-[#eabec3] min-h-screen">
       <Navbar />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-3 md:py-6 lg:py-12">
           <div className="container px-4 md:px-6 max-w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
               <div>
@@ -43,35 +43,16 @@ export default function Home() {
                   Have a look at our recipes
                 </h2>
                 <p className="text-muted-foreground md:text-xl mb-4">
-                  Discover a world of culinary delights with our handpicked selection of mouthwatering recipes. From quick and easy weeknight dinners to impressive dishes for special occasions, weve got something for every taste and skill level.
+                รวมสูตรขนมทำง่าย ใช้อุปกรณ์แค่ไมโครเวฟกับตู้เย็น เหมาะสำหรับเด็กหอหรือคนที่อยากทำขนมแบบไม่ยุ่งยาก อร่อยได้ง่าย ๆ ทุกวัน!
                 </p>
-                <Button size="lg">Explore Recipes</Button>
+                <Link href="#recipes" className="scroll-smooth">
+                  <Button size="lg">Explore Recipes</Button>
+                </Link>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <Image
-                  src="/Cake.jpg"
+                  src="/homeimage.jpg"
                   alt="Delicious pasta dish"
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <Image
-                  src="/Icecream.jpg"
-                  alt="Fresh salad"
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <Image
-                  src="/Macaron.jpg"
-                  alt="Grilled steak"
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <Image
-                  src="/Croissant.jpg"
-                  alt="Decadent dessert"
                   width={200}
                   height={200}
                   className="rounded-lg object-cover w-full h-full"
@@ -80,8 +61,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Separator className="my-8" />
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+
+        <section className="w-full py-6 md:py-12 lg:py-24 bg-muted" id = "recipes">
           <div className="container px-4 md:px-6 max-w-full">
             <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-center mb-8">
               Featured Recipes
@@ -91,8 +72,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Separator className="my-8" />
-        <section className="w-full py-12 md:py-24 lg:py-32">
+
+        <section className="w-full py-3 md:py-6 lg:py-12">
           <div className="container px-4 md:px-6 max-w-full">
             <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-center mb-8">
               What Our Users Say
@@ -103,16 +84,15 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Separator className="my-8" />
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">© 2024 Tasty Recipes. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">© Aphrodicez. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+          <div className="text-xs hover:underline underline-offset-4">
             Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+          </div>
+          <div className="text-xs hover:underline underline-offset-4">
             Privacy
-          </Link>
+          </div>
         </nav>
       </footer>
     </div>
