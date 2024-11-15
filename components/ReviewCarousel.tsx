@@ -11,27 +11,27 @@ type PropType = {
 const testimonials = [
   {
     id: 1,
-    name: 'Jane D',
-    role: 'CEO',
-    image: 'https://pagedone.io/asset/uploads/1696229969.png',
+    name: '',
+    role: '',
+    image: 'https://image.similarpng.com/very-thumbnail/2020/07/Cute-face-emoji-vector-png.png',
     rating: 5,
-    feedback: 'The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.',
+    feedback: 'ลองทำแล้วทำตามได้จริงค่ะ',
   },
   {
     id: 2,
-    name: 'Harsh P',
-    role: 'Product Designer',
-    image: 'https://pagedone.io/asset/uploads/1696229994.png',
+    name: '',
+    role: '',
+    image: 'https://image.similarpng.com/very-thumbnail/2020/07/Cute-face-emoji-vector-png.png',
     rating: 5,
-    feedback: 'Pagedone has made the process so much simpler and stress-free.',
+    feedback: 'ชอบที่ใส่ราคาวัตถุดิบมาด้วย',
   },
   {
     id: 3,
-    name: 'Kang',
-    role: 'Product Designer',
-    image: 'https://pagedone.io/asset/uploads/1696229994.png',
+    name: '',
+    role: '',
+    image: 'https://image.similarpng.com/very-thumbnail/2020/07/Cute-face-emoji-vector-png.png',
     rating: 5,
-    feedback: 'Pagedone has made the process so much simpler and stress-free.',
+    feedback: 'ดูแล้วอยากลองทำตาม',
   },
   // Add more testimonials as needed
 ];
@@ -49,7 +49,7 @@ const ReviewCarousel: React.FC<PropType> = (props) => {
               <div className="w-full lg:w-11/12">
                 <div className="group bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600">
                   <div className="flex flex-row items-center gap-5 mb-5 sm:mb-9">
-                    <img className="rounded-full object-cover" src={testimonials[index].image} alt="avatar" />
+                    <img className="rounded-full object-cover" src={testimonials[index].image} alt="avatar" height={56} width={56}/>
                     <div className="grid gap-1">
                       <h5 className="text-gray-900 font-medium transition-all duration-500">{testimonials[index].name}</h5>
                       <span className="text-sm leading-6 text-gray-500">{testimonials[index].role}</span>
@@ -65,7 +65,7 @@ const ReviewCarousel: React.FC<PropType> = (props) => {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-sm text-gray-500 leading-6 transition-all duration-500 min-h-24 group-hover:text-gray-800">
+                  <p className="text-lg text-gray-500 leading-6 transition-all duration-500 min-h-24 group-hover:text-gray-800">
                     {testimonials[index].feedback}
                   </p>
                 </div>

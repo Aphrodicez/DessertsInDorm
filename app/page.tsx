@@ -21,8 +21,17 @@ const SLIDES: number[] = Array.from(Array(SLIDE_COUNT).keys());
 
 <MenuCarousel slides={SLIDES} options={OPTIONS} />
 
+const MAINTANANCE: boolean = true;
+
 export default function Home() {
   return (
+    MAINTANANCE ? (
+      <div>
+        <h1 className="text-4xl font-bold text-center mt-20">Site is under maintanance</h1>
+      </div>
+    )
+    : 
+    (
     <div className="bg-gradient-to-l from-[#f5dde0] to-[#eabec3] min-h-screen">
       <Navbar />
       <main className="flex-1">
@@ -107,5 +116,6 @@ export default function Home() {
         </nav>
       </footer>
     </div>
+    )
   );
 }
