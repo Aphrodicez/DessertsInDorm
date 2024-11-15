@@ -3,9 +3,23 @@
 import Image from 'next/image'
 import { Microwave, Refrigerator, Utensils, Circle } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
+
+interface Tool {
+  name: string;
+}
+
+interface Ingredient {
+  name: string;
+  amount: string;
+  cost: number;
+}
+
+interface Step {
+  description: string;
+  image?: string;
+}
 
 // Mock Data
 const recipesData = [
@@ -106,7 +120,7 @@ export default function RecipePage() {
     return <div>Recipe not found {foodid}</div>
   }
 
-  const { foodName, ingredients, steps } = recipe;
+  const { foodName, ingredients, steps, tools } = recipe;
   const totalCost = ingredients.reduce((sum, ingredient) => sum + ingredient.cost, 0);
 
   return (
@@ -131,7 +145,7 @@ export default function RecipePage() {
             </CardHeader>
             <CardContent>
               <ul className="grid grid-cols-1 gap-4">
-                {recipe.tools.map((tool: any, index: any) => (
+                {tools.map((tool: Tool, index: number) => (
                   <li key={index} className="flex items-center gap-2">
                     {tool.name === 'ไมโครเวฟ' && <Microwave size={24} />}
                     {tool.name === 'ตู้เย็น' && <Refrigerator size={24} />}
@@ -154,7 +168,7 @@ export default function RecipePage() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
-              {ingredients.map((ingredient: any, index: any) => (
+              {ingredients.map((ingredient: Ingredient, index: number) => (
                 <li key={index} className="flex justify-between">
                   <span>{ingredient.name}</span>
                   <span className="text-gray-600">{ingredient.amount}</span>
@@ -170,7 +184,7 @@ export default function RecipePage() {
           </CardHeader>
           <CardContent>
             <ol className="space-y-8">
-              {steps.map((step: any, index: any) => (
+              {steps.map((step: Step, index: number) => (
                 <li key={index} className="flex flex-col md:flex-row gap-4 items-start">
                   <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
                     {index + 1}
@@ -200,7 +214,7 @@ export default function RecipePage() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 mb-4">
-              {ingredients.map((ingredient: any, index: any) => (
+              {ingredients.map((ingredient: Ingredient, index: number) => (
                 <li key={index} className="flex justify-between">
                   <span>{ingredient.name}</span>
                   <span>฿{ingredient.cost.toFixed(2)}</span>

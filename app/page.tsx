@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 
 import MenuCarousel from '@/components/MenuCarousel'
 import { EmblaOptionsType } from 'embla-carousel'
